@@ -158,9 +158,6 @@ private async Task GetModels()
                 "Etape 4 : Bien séparer les cadres si il y a plusieurs explications ou exemple de code.\n"+
                 "Point 5 : Si la langue de la réponse est pas spécifié utiliser la langue utilisé dans la demande.\n";
 
-            String myFilterBrut =
-                "Le point suivant définit comment doit être formaté la réponse :\n " +
-                "point : La réponse doit génèrer uniquement des balises HTML de type <P>\n";
 
             String myFiltFinal= "";
             
@@ -171,7 +168,7 @@ private async Task GetModels()
             }
             else
             {
-                myFiltFinal= myFilterBrut + "\n voici ma demande :\n " + txtboxInput.Text;
+                myFiltFinal= "\n voici ma demande :\n " + txtboxInput.Text;
             }
 
             if (txtboxInput.Text != "")
