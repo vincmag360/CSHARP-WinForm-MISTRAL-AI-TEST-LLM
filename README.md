@@ -1,7 +1,6 @@
 # This is a simple Windows application in WinForm to test the Mistral AI LLM.
 
 
-- I am not affiliated with Mistral.
 - This application use the Mistral.SDK an unofficial C# client designed for interacting with the Mistral API. : https://github.com/tghamm/Mistral.SDK
 
 - MISTRAL AI experimentation is free and does not require providing a payment method.
