@@ -48,7 +48,7 @@ In this file, it is possible to :
   `<KeyModelDefault>pixtral-large-latest</KeyModelDefault>`
   
 
-### Is This the End of Web Browsers ?
+## Is This the End of Web Browsers ?
 
 ![alt text](https://repository-images.githubusercontent.com/893368944/0a54ed16-df3e-43ed-bae3-ebea9e5c12b4)
 
