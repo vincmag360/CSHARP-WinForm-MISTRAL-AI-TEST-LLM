@@ -25,21 +25,17 @@ In this file, it is possible to :
 - Set the API Keys from your Mistral account.
  `<Key>BLABLABLA</Key> `
 
-- Set the rendering of the response in CSS.
-  
-`<KeyCCS>h1 {color: #800080;}`
-            
-`h2 {color: #9f3981;}`
-            
-`h3 {color: #000000d9;}`
-            
-`h4 {color: #a3a2a0;}`
-            
-`h5 {color: #b9b7b7;}`
-            
-`h6 {color: #d2d7e2;`
-
-`</KeyCCS>`
+- Set the rendering of the response in CSS :
+```
+<KeyCCS>
+h1 {color: #800080;}
+h2 {color: #9f3981;}
+h3 {color: #000000d9;}
+h4 {color: #a3a2a0;}
+h5 {color: #b9b7b7;}
+h6 {color: #d2d7e2;}
+</KeyCCS>
+```
 - Set the background color of the rendering.
   `<KeyBACK>white</KeyBACK>`
   
