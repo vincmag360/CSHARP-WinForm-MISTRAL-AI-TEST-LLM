@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using System.Xml;
 using System.Text;
 using System.ComponentModel;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 
 namespace vinc_app_1
@@ -217,6 +218,10 @@ private async Task GetModels()
                 webBrowser1.DocumentText = sresult.ToString();
                 textBox1.Text = "FINISH.......!!!!";
              }
+            else
+            {
+                textBox1.Text = "NO QUESTION ?";
+            }
 
         }
 
