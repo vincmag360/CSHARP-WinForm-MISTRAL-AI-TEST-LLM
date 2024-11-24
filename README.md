@@ -7,7 +7,7 @@
 - MISTRAL AI experimentation is free and does not require providing a payment method.
   In return, Mistral AI reserves the right to exploit the input and output data, as well as the prompts
   
-## limits
+## Limits
 
 - The usage limits to remember in November 2024, valid for all models except Embed: 1 request per second, 500,000 tokens per minute, and 1 billion tokens per month.
   https://console.mistral.ai/limits/
@@ -49,4 +49,7 @@ In this file, it is possible to :
   
 
 ### Is This the End of Web Browsers ?
+
+![alt text](https://repository-images.githubusercontent.com/893368944/0a54ed16-df3e-43ed-bae3-ebea9e5c12b4)
+
 ©Copyright 2025 Send your thanks to vincent M:      dark2024vador@tutamail.com
