@@ -16,7 +16,7 @@
 - To get started, create a Mistral account https://mistral.ai/ or sign in at console.mistral.ai.
 - After that, go to the API keys page and make a new API key by clicking Create new key. 
 - Make sure to copy the API key, save it safely, and do not share it with anyone.
-- Put the key in the file fichier.xml 
+- Put the API key in the file fichier.xml between `<Key></Key> `
 
 ## fichier.xml
 
