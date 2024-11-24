@@ -158,8 +158,9 @@ private async Task GetModels()
                 "Etape 4 : Bien séparer les cadres si il y a plusieurs explications ou exemple de code.\n"+
                 "Point 5 : Si la langue de la réponse est pas spécifié utiliser la langue utilisé dans la demande.\n";
 
-
+            String myFilterNoHtml = "Chaque ligne de la réponse doit être entre deux balises <h3> et </h3> \n";
             String myFiltFinal= "";
+
             
 
             if (chkBoxAuto.Checked)
@@ -168,7 +169,7 @@ private async Task GetModels()
             }
             else
             {
-                myFiltFinal= "\n voici ma demande :\n " + txtboxInput.Text;
+                myFiltFinal= myFilterNoHtml+ "\n voici ma demande :\n " + txtboxInput.Text;
             }
 
             if (txtboxInput.Text != "")
