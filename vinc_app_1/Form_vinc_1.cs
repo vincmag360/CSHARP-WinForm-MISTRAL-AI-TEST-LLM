@@ -159,7 +159,7 @@ private async Task GetModels()
                 "Point 5 : Si la langue de la réponse est pas spécifié utiliser la langue utilisé dans la demande.\n";
 
             String myFilterBrut =
-                "Le point suivant définissent comment doit être formaté la réponse :\n " +
+                "Le point suivant définit comment doit être formaté la réponse :\n " +
                 "point : La réponse doit génèrer uniquement des balises HTML de type <P>\n";
 
             String myFiltFinal= "";
