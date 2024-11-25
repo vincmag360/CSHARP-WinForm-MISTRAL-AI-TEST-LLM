@@ -1,7 +1,6 @@
 # This is a simple Windows application in WinForm to test the Mistral AI LLM.
 
 
-- I am not affiliated with Mistral.
 - This application use the Mistral.SDK an unofficial C# client designed for interacting with the Mistral API. : https://github.com/tghamm/Mistral.SDK
 
 - MISTRAL AI experimentation is free and does not require providing a payment method.
@@ -17,7 +16,7 @@
 - To get started, create a Mistral account https://mistral.ai/ or sign in at console.mistral.ai.
 - After that, go to the API keys page and make a new API key by clicking Create new key. 
 - Make sure to copy the API key, save it safely, and do not share it with anyone.
-- Put the key in the file fichier.xml 
+- Put the API key in the file fichier.xml between `<Key></Key> `
 
 ## fichier.xml
 
@@ -26,21 +25,17 @@ In this file, it is possible to :
 - Set the API Keys from your Mistral account.
  `<Key>BLABLABLA</Key> `
 
-- Set the rendering of the response in CSS.
-  
-`<KeyCCS>h1 {color: #800080;}`
-            
-`h2 {color: #9f3981;}`
-            
-`h3 {color: #000000d9;}`
-            
-`h4 {color: #a3a2a0;}`
-            
-`h5 {color: #b9b7b7;}`
-            
-`h6 {color: #d2d7e2;`
-
-`</KeyCCS>`
+- Set the rendering of the response in CSS :
+```
+<KeyCCS>
+h1 {color: #800080;}
+h2 {color: #9f3981;}
+h3 {color: #000000d9;}
+h4 {color: #a3a2a0;}
+h5 {color: #b9b7b7;}
+h6 {color: #d2d7e2;}
+</KeyCCS>
+```
 - Set the background color of the rendering.
   `<KeyBACK>white</KeyBACK>`
   
@@ -48,8 +43,7 @@ In this file, it is possible to :
   `<KeyModelDefault>pixtral-large-latest</KeyModelDefault>`
   
 
-### Is This the End of Web Browsers ?
+## Is This the End of Web Browsers ?
 
 ![alt text](https://repository-images.githubusercontent.com/893368944/0a54ed16-df3e-43ed-bae3-ebea9e5c12b4)
 
-©Copyright 2025 Send your thanks to vincent M:      dark2024vador@tutamail.com
