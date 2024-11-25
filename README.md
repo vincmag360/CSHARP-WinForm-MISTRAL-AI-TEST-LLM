@@ -45,5 +45,5 @@ h6 {color: #d2d7e2;}
 
 ## Is This the End of Web Browsers ?
 
-![alt text](https://repository-images.githubusercontent.com/893368944/0a54ed16-df3e-43ed-bae3-ebea9e5c12b4)
+![alt text](https://repository-images.githubusercontent.com/893368944/dc37cf0e-8676-4d09-881c-d23401970929)
 
