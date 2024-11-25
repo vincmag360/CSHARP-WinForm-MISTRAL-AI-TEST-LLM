@@ -9,6 +9,7 @@ using System.Xml;
 using System.Text;
 using System.ComponentModel;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.IO;
 
 
 namespace vinc_app_1
@@ -29,16 +30,27 @@ namespace vinc_app_1
 
             this.Text = "Welcome to Vincent's LLM Chat powered by Mistral AI  - version 1.3 (Html - models)";
 
-            String sWelcome1= "<h2> MISTRAL AI experimentation is free and does not require providing a payment method.</h2><h3>  In return, Mistral AI reserves the right to exploit the input and output data, as well as the prompts </h3>";
-            String sWelcome2= "<h2>To get started, create a Mistral account or sign in at console.mistral.ai.</h2><li>After that, go to the API keys page and make a new API key by clicking Create new key. </li><li>Make sure to copy the API key, save it safely, and do not share it with anyone.</li><li>Put the key in the file fichier.xml </li>";
-            String sWelcome3 = "<h6>dark2024vador @tutamail.com</h6>";
-           
-
-            webBrowser1.DocumentText = sWelcome1 + sWelcome2+ sWelcome3;
+            LoadHTMLFile();           
 
             GetNode();
             
         }
+
+        private void LoadHTMLFile()
+        {
+            string filePath = "hello.html";
+            if (File.Exists(filePath))
+            {
+                string htmlContent = File.ReadAllText(filePath);
+                webBrowser1.DocumentText = htmlContent;
+            }
+            else
+            {
+               
+                MessageBox.Show("The file hello.html does not exist.");
+            }
+        }
+
         private void NewWindowEventHandler(object sender, CancelEventArgs e)
         {
          e.Cancel = true;
