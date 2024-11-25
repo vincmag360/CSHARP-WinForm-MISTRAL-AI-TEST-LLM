@@ -56,8 +56,8 @@ namespace vinc_app_1
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Thistle;
-            this.button1.Location = new System.Drawing.Point(91, 12);
+            this.button1.BackColor = System.Drawing.Color.Gainsboro;
+            this.button1.Location = new System.Drawing.Point(91, 15);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(668, 44);
             this.button1.TabIndex = 2;
@@ -70,9 +70,9 @@ namespace vinc_app_1
             this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox1.Controls.Add(this.chkBoxAuto);
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Location = new System.Drawing.Point(3, -2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(765, 62);
+            this.groupBox1.Size = new System.Drawing.Size(765, 72);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             // 
@@ -91,18 +91,18 @@ namespace vinc_app_1
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(939, 0);
+            this.textBox1.Location = new System.Drawing.Point(939, 2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(293, 73);
+            this.textBox1.Size = new System.Drawing.Size(290, 68);
             this.textBox1.TabIndex = 12;
             this.textBox1.TabStop = false;
             // 
             // splitContainer1
             // 
-            this.splitContainer1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(57)))), ((int)(((byte)(129)))));
+            this.splitContainer1.BackColor = System.Drawing.Color.Gainsboro;
             this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.splitContainer1.Cursor = System.Windows.Forms.Cursors.Cross;
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -119,7 +119,7 @@ namespace vinc_app_1
             this.splitContainer1.Size = new System.Drawing.Size(1236, 803);
             this.splitContainer1.SplitterDistance = 399;
             this.splitContainer1.SplitterIncrement = 13;
-            this.splitContainer1.SplitterWidth = 7;
+            this.splitContainer1.SplitterWidth = 10;
             this.splitContainer1.TabIndex = 13;
             // 
             // txtboxInput
@@ -141,7 +141,7 @@ namespace vinc_app_1
             this.webBrowser1.Location = new System.Drawing.Point(0, 0);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(826, 799);
+            this.webBrowser1.Size = new System.Drawing.Size(823, 799);
             this.webBrowser1.TabIndex = 0;
             // 
             // panel1
@@ -165,6 +165,7 @@ namespace vinc_app_1
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.BackColor = System.Drawing.Color.Silver;
             this.splitContainer2.Panel1.Controls.Add(this.panel2);
             // 
             // splitContainer2.Panel2
@@ -178,6 +179,7 @@ namespace vinc_app_1
             // panel2
             // 
             this.panel2.AutoSize = true;
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.listBox1);
             this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Controls.Add(this.textBox1);
@@ -201,7 +203,7 @@ namespace vinc_app_1
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(57)))), ((int)(((byte)(129)))));
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1236, 882);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
