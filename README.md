@@ -47,4 +47,3 @@ h6 {color: #d2d7e2;}
 
 ![alt text](https://repository-images.githubusercontent.com/893368944/0a54ed16-df3e-43ed-bae3-ebea9e5c12b4)
 
-©Copyright 2025 Send your thanks to vincent M:      dark2024vador@tutamail.com
