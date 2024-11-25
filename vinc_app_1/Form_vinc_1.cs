@@ -31,8 +31,10 @@ namespace vinc_app_1
 
             String sWelcome1= "<h2> MISTRAL AI experimentation is free and does not require providing a payment method.</h2><h3>  In return, Mistral AI reserves the right to exploit the input and output data, as well as the prompts </h3>";
             String sWelcome2= "<h2>To get started, create a Mistral account or sign in at console.mistral.ai.</h2><li>After that, go to the API keys page and make a new API key by clicking Create new key. </li><li>Make sure to copy the API key, save it safely, and do not share it with anyone.</li><li>Put the key in the file fichier.xml </li>";
-            
-            webBrowser1.DocumentText = sWelcome1 + sWelcome2;
+            String sWelcome3 = "<h6>dark2024vador @tutamail.com</h6>";
+           
+
+            webBrowser1.DocumentText = sWelcome1 + sWelcome2+ sWelcome3;
 
             GetNode();
             
@@ -147,7 +149,7 @@ private async Task GetModels()
                 "Les 8 points suivants définissent comment doit être formaté la réponse :\n " +
                 "point 1 : La réponse doit génèrer une page au format HTML. \n " +
                 "point 2 : La réponse doit génèrer uniquement des balises HTML \n " +
-                "point 3 : La réponse doit toujours être sous cette forme : <html>  <head>  </head>   <body>background-color: " + keyValueBACK + "; <header></header><footer><p>©Copyright 2025 Send your thanks to vincent M: dark2024vador@tutamail.com</p> </footer> </body></html>\n " +
+                "point 3 : La réponse doit toujours être sous cette forme : <html>  <head>  </head>   <body>background-color: " + keyValueBACK + "; <header></header><footer></footer> </body></html>\n " +
                 "Point 4 : Pour la page html générée, utiliser le CCS suivant :\n " + keyValueCCS + "\n " +
                 "Point 5 : Ne pas afficher les lignes qui sont avant le mot DOCTYPE et ne doit pas afficher les lignes avant le mot ```html\n " +
                 "Point 6 : Ne pas générer le text qui est avant la page HTML. \n " +
@@ -159,7 +161,7 @@ private async Task GetModels()
                 "Etape 4 : Bien séparer les cadres si il y a plusieurs explications ou exemple de code.\n"+
                 "Point 5 : Si la langue de la réponse est pas spécifié utiliser la langue utilisé dans la demande.\n";
 
-            String myFilterNoHtml = "Chaque ligne de la réponse doit être entre deux balises <h3> et </h3> \n";
+            String myFilterNoHtml = "Chaque ligne de la réponse doit être entre deux balises <h4> et </h4> \n";
             String myFiltFinal= "";
 
             
