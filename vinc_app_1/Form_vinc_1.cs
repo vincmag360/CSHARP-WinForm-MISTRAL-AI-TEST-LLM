@@ -28,6 +28,8 @@ namespace vinc_app_1
         private string pathPrompts = "Prompts.xml";
         private Dictionary<string, string> dictionary;
         private string SoutHtml;
+        String myFilterSystem;
+        String myFilterSystemNoHtml;
 
 
         public Form_vinc_1()
@@ -38,11 +40,12 @@ namespace vinc_app_1
             dictionary = new Dictionary<string, string>();
 
             this.Text = "Welcome to Vincent's LLM Chat powered by Mistral AI  - version 1.3 (Html - models)";
-
+            
             LoadHTMLFile(); 
             GetNode();
             LoadPrompts();
             FillListBox();
+            LoadSystem();
 
         }
 
@@ -204,47 +207,27 @@ private async Task GetModels()
         {           
             String myModel = "";        
             myModel = listBox1.Text;
-
-             String myFilter =
-                "Les 8 points suivants définissent comment doit être formaté la réponse :\n " +
-                "point 1 : La réponse doit génèrer une page au format HTML. \n " +
-                "point 2 : La réponse doit génèrer uniquement des balises HTML \n " +
-                "point 3 : La réponse doit toujours être sous cette forme : <html>  <head>  </head>   <body>background-color: " + keyValueBACK + "; <header></header><footer></footer> </body></html>\n " +
-                "Point 4 : Pour la page html générée, utiliser le CCS suivant :\n " + keyValueCCS + "\n " +
-                "Point 5 : Ne pas afficher les lignes qui sont avant le mot DOCTYPE et ne doit pas afficher les lignes avant le mot ```html\n " +
-                "Point 6 : Ne pas générer le text qui est avant la page HTML. \n " +
-                "Point 7 : Si la langue de la réponse est pas spécifié utiliser la langue utilisé dans la demande.\n" +
-                "Point 8 : Ne pas utiliser les 5 étapes suivantes si la question ou la demande ne parle pas de code informatique :\n " +
-                "Etape 1 : Vous êtes un expert en code informatique.\n " +
-                "Etape 2 : L'affichage du code doit utiliser la coloration syntaxique afin d'améliorer la lisibilité et la compréhension.\n " +
-                "Etape 3 : Les exemples du code doivent etre dans une bordure de couleur bleue avec un fond de couleur gris clair et doit utiliser une scrollbar verticale ou horizontal.\n"+
-                "Etape 4 : Bien séparer les cadres si il y a plusieurs explications ou exemple de code.\n"+
-                "Point 5 : Si la langue de la réponse est pas spécifié utiliser la langue utilisé dans la demande.\n";
-
-            String myFilterNoHtml = "Chaque ligne de la réponse doit être entre deux balises <h4> et </h4> \n";
-            String myFiltFinal= "";
-
-            
+      
+            String myFiltFinal = "";            
 
             if (chkBoxAuto.Checked)
             {
-                myFiltFinal = myFilter + "\n voici ma demande :\n " + txtboxInput.Text;
+                myFiltFinal = myFilterSystem;
             }
             else
             {
-                myFiltFinal= myFilterNoHtml+ "\n voici ma demande :\n " + txtboxInput.Text;
+                myFiltFinal= myFilterSystemNoHtml;
             }
 
             if (txtboxInput.Text != "")
             {
                 var request = new ChatCompletionRequest(
                     myModel,
-                    new List<ChatMessage>
+                    new List<ChatMessage>()
                     {
-
-                        new ChatMessage(ChatMessage.RoleEnum.User,   myFiltFinal  )
-                    }
-                ); 
+                        new ChatMessage(ChatMessage.RoleEnum.System,myFiltFinal),
+                        new ChatMessage(ChatMessage.RoleEnum.User, txtboxInput.Text)                      
+                    });
 
                 int Cint = 0;
                 var sresult = new StringBuilder();
@@ -404,6 +387,23 @@ private async Task GetModels()
                 e.Cancel = true;
             }      
             else if(!containsblank) e.Cancel = true;           
+
+        }
+
+        private void LoadSystem()
+        {
+            myFilterSystem =
+               
+               "La réponse doit génèrer une page au format HTML. \n " +
+               "La réponse doit génèrer uniquement des balises HTML. \n " +
+               "La réponse doit toujours être sous cette forme : <html>  <head><style>"+keyValueCCS+ "body {background-color:" + keyValueBACK + "}</style></head></head><body><header></header><footer></footer> </body></html>\n " +
+               "Ne pas générer le text qui est avant la balise <html> ou la page HTML. \n " +
+                //"Si la réponse affiche du code informatique, l'affichage de se code doit utiliser la coloration syntaxique afin d'améliorer la lisibilité et la compréhension.\n ";
+            //"Si la réponse affiche du code informatique, seul le code doit être dans un cadre avec une bordure de couleur rouge avec un fond de couleur gris clair et doit utiliser une scrollbar verticale ou horizontal.\n";
+               "Si la langue de la réponse est pas spécifié utiliser la langue utilisé dans la demande.\n";
+
+
+          myFilterSystemNoHtml = "Chaque ligne de la réponse doit être entre deux balises HTML <h4> et </h4> \n";
 
         }
     }
