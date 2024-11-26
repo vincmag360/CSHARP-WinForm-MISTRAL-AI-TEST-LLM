@@ -1,0 +1,67 @@
+﻿<html>
+<head>
+<style>
+h1 {color: #800080;}
+h2 {color: #9f3982;}
+h3 {color: #000000d9;}
+h4 {color: #a3a2a0;}
+h5 {color: #b9b7b7;}
+h6 {color: #d2d7e2;}
+body {background-color: white;}
+</style>
+</head>
+<body>
+<header>
+    <h1>MISTRAL AI Experimentation</h1>
+    <p>MISTRAL AI experimentation is free and does not require providing a payment method. In return, Mistral AI reserves the right to exploit the input and output data, as well as the prompts.</p>
+</header>
+<main>
+    <h2>Application Details</h2>
+    <p>This application uses the Mistral.SDK, an unofficial C# client designed for interacting with the Mistral API. <a href="https://github.com/tghamm/Mistral.SDK">Mistral.SDK GitHub</a></p>
+
+    <h2>Limits</h2>
+    <p>The usage limits to remember in November 2024, valid for all models except Embed:</p>
+    <ul>
+        <li>1 request per second</li>
+        <li>500,000 tokens per minute</li>
+        <li>1 billion tokens per month</li>
+    </ul>
+    <p><a href="https://console.mistral.ai/limits/">Limits Details</a></p>
+
+    <h2>API Key</h2>
+    <p>To get started, create a Mistral account <a href="https://mistral.ai/">Mistral AI</a> or sign in at <a href="console.mistral.ai">console.mistral.ai</a>.</p>
+    <p>After that, go to the API keys page and make a new API key by clicking "Create new key".</p>
+    <p>Make sure to copy the API key, save it safely, and do not share it with anyone.</p>
+    <p>Put the API key in the file <code>fichier.xml</code> between <code>&lt;Key&gt;&lt;/Key&gt;</code>.</p>
+
+    <h2>fichier.xml Configuration</h2>
+    <p>In this file, it is possible to:</p>
+    <ul>
+        <li>Set the API Keys from your Mistral account. <code>&lt;Key&gt;BLABLABLA&lt;/Key&gt;</code></li>
+        <li>Set the rendering of the response in CSS:</li>
+    </ul>
+    <pre>
+<code>
+&lt;KeyCCS&gt;
+h1 {color: #800080;}
+h2 {color: #9f3981;}
+h3 {color: #000000d9;}
+h4 {color: #a3a2a0;}
+h5 {color: #b9b7b7;}
+h6 {color: #d2d7e2;}
+&lt;/KeyCCS&gt;
+</code>
+    </pre>
+    <ul>
+        <li>Set the background color of the rendering. <code>&lt;KeyBACK&gt;white&lt;/KeyBACK&gt;</code></li>
+        <li>Set the default rendering model of the Mistral LLM <code>&lt;KeyModelDefault&gt;pixtral-large-latest&lt;/KeyModelDefault&gt;</code></li>
+    </ul>
+
+    <h2>Is This the End of Web Browsers?</h2> 
+</main>
+<footer>
+    <p>Contact: dark2024vador @tutamail.com</p>
+</footer>
+</body>
+</html>
+```
