@@ -56,6 +56,6 @@ h6 {color: #d2d7e2;}
 
 ## :star:Is This the End of Web Browsers ?
 
-![alt text](https://repository-images.githubusercontent.com/893368944/de21e980-7af8-49fd-90c8-9d2c36f375cc)
+![alt text](https://repository-images.githubusercontent.com/894515713/9c722373-1636-4aca-a4bb-b56c60a7637f)
 
 <a href="#top">Back to top</a>
