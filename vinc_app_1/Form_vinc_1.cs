@@ -330,21 +330,7 @@ private async Task GetModels()
 
     
 
-        private void webBrowser1_Navigating(object sender, WebBrowserNavigatingEventArgs e)
-        {
-
-            string searchTerm = e.Url.ToString().ToLower();
-            bool contains = searchTerm.Contains("about");
-            bool containsblank = searchTerm.Contains("about:blank");
-
-            if (!contains)
-            {
-                System.Diagnostics.Process.Start(e.Url.ToString());
-                e.Cancel = true;
-            }      
-            else if(!containsblank) e.Cancel = true;           
-
-        }
+        
 
         private void LoadSystem()
         {
@@ -418,5 +404,26 @@ private async Task GetModels()
         {
             Button1_ClickAsync(sender, e).ConfigureAwait(false);
         }
+
+    
+       
+
+        private void webBrowser1_Navigating_1(object sender, WebBrowserNavigatingEventArgs e)
+        {
+            string searchTerm = e.Url.ToString().ToLower();
+            bool contains = searchTerm.Contains("about");
+            bool containsblank = searchTerm.Contains("about:blank");
+
+            if (!contains)
+            {
+                System.Diagnostics.Process.Start(e.Url.ToString());
+                e.Cancel = true;
+            }
+            else if (!containsblank) e.Cancel = true;
+        }
+
+      
     }
+
+
 }
