@@ -36,6 +36,11 @@ namespace vinc_app_1
         {
            InitializeComponent();
 
+            splitContainer4.IsSplitterFixed = true;
+            splitContainer4.FixedPanel = FixedPanel.Panel1;
+            splitContainer1.IsSplitterFixed = true;
+            splitContainer1.FixedPanel = FixedPanel.Panel1;
+
             webBrowser1.NewWindow += new CancelEventHandler(NewWindowEventHandler);
             dictionary = new Dictionary<string, string>();
 
@@ -109,11 +114,7 @@ namespace vinc_app_1
 
 
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Button1_ClickAsync(sender, e).ConfigureAwait(false);
-        }
-
+       
 
         private async Task Button1_ClickAsync(object sender, EventArgs e)
         {
@@ -207,7 +208,8 @@ private async Task GetModels()
         {           
             String myModel = "";        
             myModel = listBox1.Text;
-      
+
+            
             String myFiltFinal = "";            
 
             if (chkBoxAuto.Checked)
@@ -290,16 +292,7 @@ private async Task GetModels()
             return input.Substring(input.Length - 5);
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            if (txtboxInput.Text!="" & txtBoxPrompts.Text!="")
-            {
-                dictionary[txtBoxPrompts.Text] = txtboxInput.Text;
-
-            }      
-            FillListBox();
-            SaveListBoxToXml();
-        }
+       
 
         private void SaveListBoxToXml()
         {
@@ -333,46 +326,9 @@ private async Task GetModels()
 
         }
 
-        private void listBoxPrompt_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        
 
-            if (listBoxPrompt.SelectedItem != null)
-            {
-                string selectedItem = listBoxPrompt.SelectedItem.ToString();
-
-
-                foreach (var kvp in dictionary)
-                {
-                    string skey = kvp.Key;
-                    if (kvp.Key == selectedItem)
-                    {
-                        txtboxInput.Text = kvp.Value;
-                        txtBoxPrompts.Text = skey;
-                    }
-                }
-            }
-
-        }
-
-        private void bdDeletePrompt_Click(object sender, EventArgs e)
-        {
-            try
-            {
-
-                if (listBoxPrompt.SelectedItem != null)
-                {
-                    dictionary.Remove(listBoxPrompt.SelectedItem.ToString());
-                    FillListBox();
-                    SaveListBoxToXml();
-
-                }           
-            }
-            catch (Exception ex)
-            {
-                textBox1.Text = "An error occurred:" + ex.Message + "\n";
-            }
-
-        }
+    
 
         private void webBrowser1_Navigating(object sender, WebBrowserNavigatingEventArgs e)
         {
@@ -405,6 +361,62 @@ private async Task GetModels()
 
           myFilterSystemNoHtml = "Chaque ligne de la réponse doit être entre deux balises HTML <h4> et </h4> \n";
 
+        }
+
+   
+     
+        private void btNewPrompts_Click(object sender, EventArgs e)
+        {
+            if (txtboxInput.Text != "" & txtBoxPrompts.Text != "")
+            {
+                dictionary[txtBoxPrompts.Text] = txtboxInput.Text;
+
+            }
+            FillListBox();
+            SaveListBoxToXml();
+        }
+
+        private void bdDeletePrompt_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+
+                if (listBoxPrompt.SelectedItem != null)
+                {
+                    dictionary.Remove(listBoxPrompt.SelectedItem.ToString());
+                    FillListBox();
+                    SaveListBoxToXml();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                textBox1.Text = "An error occurred:" + ex.Message + "\n";
+            }
+        }
+
+        private void listBoxPrompt_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (listBoxPrompt.SelectedItem != null)
+            {
+                string selectedItem = listBoxPrompt.SelectedItem.ToString();
+
+
+                foreach (var kvp in dictionary)
+                {
+                    string skey = kvp.Key;
+                    if (kvp.Key == selectedItem)
+                    {
+                        txtboxInput.Text = kvp.Value;
+                        txtBoxPrompts.Text = skey;
+                    }
+                }
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Button1_ClickAsync(sender, e).ConfigureAwait(false);
         }
     }
 }
