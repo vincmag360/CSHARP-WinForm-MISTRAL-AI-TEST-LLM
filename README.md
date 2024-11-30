@@ -3,6 +3,8 @@
 
 
 - This application use the Mistral.SDK an unofficial C# client designed for interacting with the Mistral API. : https://github.com/tghamm/Mistral.SDK
+- This application facilitates interaction with the various AI models offered by Mistral AI.
+It also features a straightforward management system for Prompts.
   
 - Mistral AI API documentation : https://docs.mistral.ai/api/#tag/chat
 
