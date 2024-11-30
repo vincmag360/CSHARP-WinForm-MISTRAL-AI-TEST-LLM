@@ -28,17 +28,16 @@ Experimentation with Mistral AI is free and does not require providing a payment
 
 - To get started, create a Mistral account https://mistral.ai/ or sign in at console.mistral.ai.
 - After that, go to the API keys page and make a new API key by clicking Create new key. 
-- Make sure to copy the API key, save it safely, and do not share it with anyone.
+- Make sure to copy the API key, save it safely, :warning: and do not share it with anyone.
 - Put the API key in the file fichier.xml between `<Key></Key> `
 
 ## fichier.xml
 
 In this file, it is possible to :
 
-- Set the API Keys from your Mistral account.
+* :pushpin:**Set the API Keys from your Mistral account**
  `<Key>BLABLABLA</Key> `
-
-- Set the rendering of the response in CSS :
+* :pushpin:**Set the rendering of the response in CSS**
 ```
 <KeyCCS>
 h1 {color: #800080;}
@@ -49,11 +48,10 @@ h5 {color: #b9b7b7;}
 h6 {color: #d2d7e2;}
 </KeyCCS>
 ```
-- Set the background color of the rendering.
-  `<KeyBACK>white</KeyBACK>`
-  
- - Set the default rendering model of the Mistral LLM
-  `<KeyModelDefault>pixtral-large-latest</KeyModelDefault>`
+* :pushpin:**Set the background color of the rendering**
+`<KeyBACK>white</KeyBACK>`
+* :pushpin:**Set the default rendering model of the Mistral LLM**
+`<KeyModelDefault>pixtral-large-latest</KeyModelDefault>`
   
 
 ## :star:Is This the End of Web Browsers ?
