@@ -11,6 +11,7 @@
 
 - The usage limits to remember in November 2024, valid for all models except Embed: 1 request per second, 500,000 tokens per minute, and 1 billion tokens per month.
   https://console.mistral.ai/limits/
+- Tokenization  : https://docs.mistral.ai/guides/tokenization/
 
 ## API Key
 
