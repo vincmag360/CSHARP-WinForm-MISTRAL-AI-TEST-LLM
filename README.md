@@ -1,3 +1,5 @@
+[![License: MIT](https://img.shields.io/github/license/VINCMAG360/CSHARP-WinForm-MISTRAL-AI-TEST-LLM)](https://github.com/vincmag360/CSHARP-WinForm-MISTRAL-AI-TEST-LLM/blob/master/LICENSE.txt)
+
 
 # This is a simple Windows application in WinForm to test the Mistral AI LLM.
 
