@@ -3,6 +3,8 @@
 
 
 - This application use the Mistral.SDK an unofficial C# client designed for interacting with the Mistral API. : https://github.com/tghamm/Mistral.SDK
+  
+- Mistral AI API documentation : https://docs.mistral.ai/api/#tag/chat
 
 - MISTRAL AI experimentation is free and does not require providing a payment method.
   In return, Mistral AI reserves the right to exploit the input and output data, as well as the prompts
