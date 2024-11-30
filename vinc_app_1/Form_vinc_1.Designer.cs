@@ -66,7 +66,7 @@ namespace vinc_app_1
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1236, 882);
+            this.panel1.Size = new System.Drawing.Size(1165, 734);
             this.panel1.TabIndex = 14;
             // 
             // splitContainer1
@@ -88,8 +88,8 @@ namespace vinc_app_1
             // 
             this.splitContainer1.Panel2.Controls.Add(this.webBrowser1);
             this.splitContainer1.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.splitContainer1.Size = new System.Drawing.Size(1236, 882);
-            this.splitContainer1.SplitterDistance = 366;
+            this.splitContainer1.Size = new System.Drawing.Size(1165, 734);
+            this.splitContainer1.SplitterDistance = 344;
             this.splitContainer1.SplitterIncrement = 13;
             this.splitContainer1.SplitterWidth = 10;
             this.splitContainer1.TabIndex = 14;
@@ -113,7 +113,7 @@ namespace vinc_app_1
             this.splitContainer3.Panel2.Controls.Add(this.txtboxInput);
             this.splitContainer3.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.splitContainer3.Panel2MinSize = 333;
-            this.splitContainer3.Size = new System.Drawing.Size(362, 878);
+            this.splitContainer3.Size = new System.Drawing.Size(340, 730);
             this.splitContainer3.SplitterDistance = 250;
             this.splitContainer3.SplitterWidth = 11;
             this.splitContainer3.TabIndex = 2;
@@ -143,17 +143,18 @@ namespace vinc_app_1
             // 
             this.splitContainer4.Panel2.Controls.Add(this.listBoxPrompt);
             this.splitContainer4.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.splitContainer4.Size = new System.Drawing.Size(362, 250);
+            this.splitContainer4.Size = new System.Drawing.Size(340, 250);
             this.splitContainer4.SplitterDistance = 180;
             this.splitContainer4.TabIndex = 8;
             // 
             // listBox1
             // 
             this.listBox1.BackColor = System.Drawing.Color.White;
+            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(1, 6);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(132, 121);
+            this.listBox1.Size = new System.Drawing.Size(132, 117);
             this.listBox1.TabIndex = 13;
             // 
             // bdDeletePrompt
@@ -162,7 +163,7 @@ namespace vinc_app_1
             this.bdDeletePrompt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bdDeletePrompt.Location = new System.Drawing.Point(3, 128);
             this.bdDeletePrompt.Name = "bdDeletePrompt";
-            this.bdDeletePrompt.Size = new System.Drawing.Size(356, 23);
+            this.bdDeletePrompt.Size = new System.Drawing.Size(334, 23);
             this.bdDeletePrompt.TabIndex = 7;
             this.bdDeletePrompt.Text = "Delete selected prompt";
             this.bdDeletePrompt.UseVisualStyleBackColor = false;
@@ -177,7 +178,7 @@ namespace vinc_app_1
             this.textBox1.Location = new System.Drawing.Point(139, 54);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(220, 68);
+            this.textBox1.Size = new System.Drawing.Size(198, 68);
             this.textBox1.TabIndex = 12;
             this.textBox1.TabStop = false;
             // 
@@ -185,7 +186,7 @@ namespace vinc_app_1
             // 
             this.txtBoxPrompts.Location = new System.Drawing.Point(97, 155);
             this.txtBoxPrompts.Name = "txtBoxPrompts";
-            this.txtBoxPrompts.Size = new System.Drawing.Size(262, 20);
+            this.txtBoxPrompts.Size = new System.Drawing.Size(240, 20);
             this.txtBoxPrompts.TabIndex = 6;
             // 
             // chkBoxAuto
@@ -218,7 +219,7 @@ namespace vinc_app_1
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(139, 6);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(220, 25);
+            this.button1.Size = new System.Drawing.Size(198, 25);
             this.button1.TabIndex = 2;
             this.button1.Text = "Go";
             this.button1.UseVisualStyleBackColor = false;
@@ -226,11 +227,12 @@ namespace vinc_app_1
             // 
             // listBoxPrompt
             // 
+            this.listBoxPrompt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBoxPrompt.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBoxPrompt.FormattingEnabled = true;
             this.listBoxPrompt.Location = new System.Drawing.Point(0, 0);
             this.listBoxPrompt.Name = "listBoxPrompt";
-            this.listBoxPrompt.Size = new System.Drawing.Size(362, 66);
+            this.listBoxPrompt.Size = new System.Drawing.Size(340, 66);
             this.listBoxPrompt.TabIndex = 0;
             this.listBoxPrompt.SelectedIndexChanged += new System.EventHandler(this.listBoxPrompt_SelectedIndexChanged_1);
             // 
@@ -243,7 +245,7 @@ namespace vinc_app_1
             this.txtboxInput.Multiline = true;
             this.txtboxInput.Name = "txtboxInput";
             this.txtboxInput.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtboxInput.Size = new System.Drawing.Size(362, 617);
+            this.txtboxInput.Size = new System.Drawing.Size(340, 469);
             this.txtboxInput.TabIndex = 1;
             // 
             // webBrowser1
@@ -252,19 +254,17 @@ namespace vinc_app_1
             this.webBrowser1.Location = new System.Drawing.Point(0, 0);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(856, 878);
+            this.webBrowser1.Size = new System.Drawing.Size(807, 730);
             this.webBrowser1.TabIndex = 0;
             // 
             // Form_vinc_1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(1236, 882);
+            this.ClientSize = new System.Drawing.Size(1165, 734);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(1181, 773);
             this.Name = "Form_vinc_1";
             this.Text = "Bienvenue sur le Chat Bot LLM de vincent propulsé par Mistral  AI !!!";
             this.panel1.ResumeLayout(false);
