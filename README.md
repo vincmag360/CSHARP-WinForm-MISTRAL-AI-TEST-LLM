@@ -1,3 +1,6 @@
+[![.NET](https://github.com/tghamm/Mistral.SDK/actions/workflows/dotnet.yml/badge.svg)](https://github.com/tghamm/Mistral.SDK/actions/workflows/dotnet.yml)
+
+
 # This is a simple Windows application in WinForm to test the Mistral AI LLM.
 
 
