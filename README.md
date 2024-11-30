@@ -2,17 +2,21 @@
 # This is a simple Windows application in WinForm to test the Mistral AI LLM.
 
 
-- This application use the Mistral.SDK an unofficial C# client designed for interacting with the Mistral API. : https://github.com/tghamm/Mistral.SDK
-- This application facilitates interaction with the various AI models offered by Mistral AI.
-It also features a straightforward management system for Prompts.
+## Mistral.SDK Usage
+This application utilizes the Mistral.SDK, an unofficial C# client designed for interacting with the Mistral API. https://github.com/tghamm/Mistral.SDK
 
-- The response format used in this application is "text" but it is possible to use json in the code.
-See the Mistral API: Enum: "text" "json_object" . Json allows you to have a formatted response and exploit it to create a rich graphical response or have interesting actions.
-  
-- Mistral AI API documentation : https://docs.mistral.ai/api/#tag/chat
+## Application Features
+This application facilitates interaction with the various AI models offered by Mistral AI. It also features a straightforward management system for Prompts.
 
-- MISTRAL AI experimentation is free and does not require providing a payment method.
-  In return, Mistral AI reserves the right to exploit the input and output data, as well as the prompts
+## Response Format
+The response format used in this application is "text," but it is possible to use JSON in the code. See the Mistral API: Enum: "text" "json_object". JSON allows you to have a formatted response and exploit it to create a rich graphical response or have interesting actions.
+
+## API Documentation
+Mistral AI API documentation: https://docs.mistral.ai/api/#tag/chat
+
+## Experimentation with Mistral AI
+Experimentation with Mistral AI is free and does not require providing a payment method. In return, Mistral AI reserves the right to exploit the input and output data, as well as the prompts.
+
   
 ## Limits
 
