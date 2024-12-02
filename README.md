@@ -11,7 +11,9 @@ This application utilizes the Mistral.SDK, an unofficial C# client designed for 
 This application facilitates interaction with the various AI models offered by Mistral AI. It also features a straightforward management system for Prompts.
 
 ## Response Format
-The response format used in this application is "text," but it is possible to use JSON in the code. See the Mistral API: Enum: "text" "json_object". JSON allows you to have a formatted response and exploit it to create a rich graphical response or have interesting actions.
+- The response format used in this application is "text," but it is possible to use JSON in the code. See the Mistral API: Enum: "text" "json_object". JSON allows you to have a formatted response and exploit it to create a rich graphical response or have interesting actions.
+- The output is in HTML format (conversion of markdown txt to HTML).
+- Code examples are displayed in a blue frame in the HTML response.
 
 ## API Documentation
 Mistral AI API documentation: https://docs.mistral.ai/api/#tag/chat
