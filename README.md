@@ -60,6 +60,13 @@ h6 {color: #d2d7e2;}
 
 ## :star:Is This the End of Web Browsers ?
 
+- No use of a web browser.
+- Your Internet service provider does not see your activity.
+- Google is not spying on you!
+- Quick opening.
+- Portability, no need for setup.
+- Management of prompts.
+
 ![alt text](https://repository-images.githubusercontent.com/894515713/9c722373-1636-4aca-a4bb-b56c60a7637f)
 
 <a href="#top">Back to top</a>
