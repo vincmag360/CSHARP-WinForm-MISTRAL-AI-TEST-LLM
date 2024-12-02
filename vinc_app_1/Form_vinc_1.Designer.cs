@@ -154,14 +154,14 @@ namespace vinc_app_1
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(1, 6);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(132, 117);
+            this.listBox1.Size = new System.Drawing.Size(132, 130);
             this.listBox1.TabIndex = 13;
             // 
             // bdDeletePrompt
             // 
             this.bdDeletePrompt.BackColor = System.Drawing.Color.DarkGray;
             this.bdDeletePrompt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bdDeletePrompt.Location = new System.Drawing.Point(3, 128);
+            this.bdDeletePrompt.Location = new System.Drawing.Point(7, 140);
             this.bdDeletePrompt.Name = "bdDeletePrompt";
             this.bdDeletePrompt.Size = new System.Drawing.Size(334, 23);
             this.bdDeletePrompt.TabIndex = 7;
@@ -175,16 +175,16 @@ namespace vinc_app_1
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(139, 54);
+            this.textBox1.Location = new System.Drawing.Point(143, 54);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(198, 68);
+            this.textBox1.Size = new System.Drawing.Size(194, 80);
             this.textBox1.TabIndex = 12;
             this.textBox1.TabStop = false;
             // 
             // txtBoxPrompts
             // 
-            this.txtBoxPrompts.Location = new System.Drawing.Point(97, 155);
+            this.txtBoxPrompts.Location = new System.Drawing.Point(101, 171);
             this.txtBoxPrompts.Name = "txtBoxPrompts";
             this.txtBoxPrompts.Size = new System.Drawing.Size(240, 20);
             this.txtBoxPrompts.TabIndex = 6;
@@ -194,7 +194,7 @@ namespace vinc_app_1
             this.chkBoxAuto.AutoSize = true;
             this.chkBoxAuto.Checked = true;
             this.chkBoxAuto.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkBoxAuto.Location = new System.Drawing.Point(139, 35);
+            this.chkBoxAuto.Location = new System.Drawing.Point(143, 37);
             this.chkBoxAuto.Name = "chkBoxAuto";
             this.chkBoxAuto.Size = new System.Drawing.Size(81, 17);
             this.chkBoxAuto.TabIndex = 3;
@@ -205,7 +205,7 @@ namespace vinc_app_1
             // 
             this.btNewPrompts.BackColor = System.Drawing.Color.DarkGray;
             this.btNewPrompts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btNewPrompts.Location = new System.Drawing.Point(3, 154);
+            this.btNewPrompts.Location = new System.Drawing.Point(7, 168);
             this.btNewPrompts.Name = "btNewPrompts";
             this.btNewPrompts.Size = new System.Drawing.Size(88, 23);
             this.btNewPrompts.TabIndex = 5;
@@ -217,7 +217,7 @@ namespace vinc_app_1
             // 
             this.button1.BackColor = System.Drawing.Color.DarkGray;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(139, 6);
+            this.button1.Location = new System.Drawing.Point(143, 6);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(198, 25);
             this.button1.TabIndex = 2;

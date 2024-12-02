@@ -335,17 +335,18 @@ private async Task GetModels()
         private void LoadSystem()
         {
             myFilterSystem =
-               
+
                "La réponse doit génèrer une page au format HTML. \n " +
                "La réponse doit génèrer uniquement des balises HTML. \n " +
-               "La réponse doit toujours être sous cette forme : <html>  <head><style>"+keyValueCCS+ "body {background-color:" + keyValueBACK + "}</style></head></head><body><header></header><footer></footer> </body></html>\n " +
+               "La réponse doit toujours être sous cette forme : <html>  <head><style>" + keyValueCCS + "body {background-color:" + keyValueBACK + "}</style></head></head><body><header></header><footer></footer> </body></html>\n " +
                "Ne pas générer le text qui est avant la balise <html> ou la page HTML. \n " +
-                //"Si la réponse affiche du code informatique, l'affichage de se code doit utiliser la coloration syntaxique afin d'améliorer la lisibilité et la compréhension.\n ";
-            //"Si la réponse affiche du code informatique, seul le code doit être dans un cadre avec une bordure de couleur rouge avec un fond de couleur gris clair et doit utiliser une scrollbar verticale ou horizontal.\n";
+               "Si la réponse affiche du code informatique entre des markdown ``` et ``` ,alors l'affichage de se code doit utiliser la coloration syntaxique afin d'améliorer la lisibilité et la compréhension.\n "+
+               "Si la réponse affiche du code informatique, entre des markdown ``` et ``` ,alors le code doit être dans un cadre avec une bordure de couleur bleu avec un fond de couleur gris clair et doit utiliser une scrollbar verticale ou horizontal.\n" +
                "Si la langue de la réponse est pas spécifié utiliser la langue utilisé dans la demande.\n";
 
 
-          myFilterSystemNoHtml = "Chaque ligne de la réponse doit être entre deux balises HTML <h4> et </h4> \n";
+
+            myFilterSystemNoHtml = "Chaque ligne de la réponse doit être entre deux balises HTML <h4> et </h4> \n";
 
         }
 
