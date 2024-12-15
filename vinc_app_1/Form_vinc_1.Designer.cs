@@ -44,6 +44,9 @@ namespace vinc_app_1
             this.listBoxPrompt = new System.Windows.Forms.ListBox();
             this.txtboxInput = new System.Windows.Forms.TextBox();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.checkBoxChat = new System.Windows.Forms.CheckBox();
+            this.checkBoxChatbotView = new System.Windows.Forms.CheckBox();
+            this.btDeleteChat = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -129,6 +132,9 @@ namespace vinc_app_1
             // splitContainer4.Panel1
             // 
             this.splitContainer4.Panel1.BackColor = System.Drawing.Color.White;
+            this.splitContainer4.Panel1.Controls.Add(this.btDeleteChat);
+            this.splitContainer4.Panel1.Controls.Add(this.checkBoxChatbotView);
+            this.splitContainer4.Panel1.Controls.Add(this.checkBoxChat);
             this.splitContainer4.Panel1.Controls.Add(this.listBox1);
             this.splitContainer4.Panel1.Controls.Add(this.bdDeletePrompt);
             this.splitContainer4.Panel1.Controls.Add(this.textBox1);
@@ -175,10 +181,10 @@ namespace vinc_app_1
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(143, 54);
+            this.textBox1.Location = new System.Drawing.Point(147, 60);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(194, 80);
+            this.textBox1.Size = new System.Drawing.Size(194, 74);
             this.textBox1.TabIndex = 12;
             this.textBox1.TabStop = false;
             // 
@@ -194,7 +200,7 @@ namespace vinc_app_1
             this.chkBoxAuto.AutoSize = true;
             this.chkBoxAuto.Checked = true;
             this.chkBoxAuto.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkBoxAuto.Location = new System.Drawing.Point(143, 37);
+            this.chkBoxAuto.Location = new System.Drawing.Point(256, 10);
             this.chkBoxAuto.Name = "chkBoxAuto";
             this.chkBoxAuto.Size = new System.Drawing.Size(81, 17);
             this.chkBoxAuto.TabIndex = 3;
@@ -219,7 +225,7 @@ namespace vinc_app_1
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(143, 6);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(198, 25);
+            this.button1.Size = new System.Drawing.Size(107, 25);
             this.button1.TabIndex = 2;
             this.button1.Text = "Go";
             this.button1.UseVisualStyleBackColor = false;
@@ -257,6 +263,41 @@ namespace vinc_app_1
             this.webBrowser1.Size = new System.Drawing.Size(531, 732);
             this.webBrowser1.TabIndex = 0;
             this.webBrowser1.Navigating += new System.Windows.Forms.WebBrowserNavigatingEventHandler(this.webBrowser1_Navigating_1);
+            // 
+            // checkBoxChat
+            // 
+            this.checkBoxChat.AutoSize = true;
+            this.checkBoxChat.Location = new System.Drawing.Point(143, 37);
+            this.checkBoxChat.Name = "checkBoxChat";
+            this.checkBoxChat.Size = new System.Drawing.Size(63, 17);
+            this.checkBoxChat.TabIndex = 14;
+            this.checkBoxChat.Text = "Chatbot";
+            this.checkBoxChat.UseVisualStyleBackColor = true;
+            this.checkBoxChat.CheckedChanged += new System.EventHandler(this.checkBoxChat_CheckedChanged);
+            // 
+            // checkBoxChatbotView
+            // 
+            this.checkBoxChatbotView.AutoSize = true;
+            this.checkBoxChatbotView.Enabled = false;
+            this.checkBoxChatbotView.Location = new System.Drawing.Point(208, 36);
+            this.checkBoxChatbotView.Name = "checkBoxChatbotView";
+            this.checkBoxChatbotView.Size = new System.Drawing.Size(49, 17);
+            this.checkBoxChatbotView.TabIndex = 15;
+            this.checkBoxChatbotView.Text = "View";
+            this.checkBoxChatbotView.UseVisualStyleBackColor = true;
+            this.checkBoxChatbotView.CheckedChanged += new System.EventHandler(this.checkBoxChatbotView_CheckedChanged);
+            // 
+            // btDeleteChat
+            // 
+            this.btDeleteChat.BackColor = System.Drawing.Color.DarkGray;
+            this.btDeleteChat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btDeleteChat.Location = new System.Drawing.Point(256, 31);
+            this.btDeleteChat.Name = "btDeleteChat";
+            this.btDeleteChat.Size = new System.Drawing.Size(75, 23);
+            this.btDeleteChat.TabIndex = 16;
+            this.btDeleteChat.Text = "Delete";
+            this.btDeleteChat.UseVisualStyleBackColor = false;
+            this.btDeleteChat.Click += new System.EventHandler(this.btDeleteChat_Click);
             // 
             // Form_vinc_1
             // 
@@ -302,6 +343,9 @@ namespace vinc_app_1
         private System.Windows.Forms.ListBox listBoxPrompt;
         private System.Windows.Forms.TextBox txtboxInput;
         private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.CheckBox checkBoxChat;
+        private System.Windows.Forms.CheckBox checkBoxChatbotView;
+        private System.Windows.Forms.Button btDeleteChat;
     }
 }
 

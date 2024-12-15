@@ -14,6 +14,7 @@ using System.Reflection;
 using System.Collections;
 using System.Diagnostics;
 using static System.Net.Mime.MediaTypeNames;
+using System.Diagnostics.Eventing.Reader;
 
 
 namespace vinc_app_1
@@ -26,7 +27,10 @@ namespace vinc_app_1
         private string KeyModelDefault;
         private string keyValue;
         private string pathPrompts = "Prompts.xml";
+        private string pathHistoChat = "Chats.xml";
         private Dictionary<string, string> dictionary;
+        private Dictionary<string, string> dictionaryChats;
+        private uint iChats = 1;
         private string SoutHtml;
         String myFilterSystem;
         String myFilterSystemNoHtml;
@@ -43,12 +47,14 @@ namespace vinc_app_1
 
             webBrowser1.NewWindow += new CancelEventHandler(NewWindowEventHandler);
             dictionary = new Dictionary<string, string>();
+            dictionaryChats = new Dictionary<string, string>();
 
             this.Text = "Welcome to Vincent's LLM Chat powered by Mistral AI  - version 1.3 (Html - models)";
             
             LoadHTMLFile(); 
             GetNode();
-            LoadPrompts();
+            LoadXMLChats();
+            LoadXMLPrompts();
             FillListBox();
             LoadSystem();
 
@@ -63,8 +69,83 @@ namespace vinc_app_1
             }
         }
 
+        private void InitChats()
+        {
 
-        private void LoadPrompts()
+            iChats = 1;
+            String sIA = "Vous êtes un chatbot IA. Votre tâche est de répondre aux questions de l'utilisateur de manière précise et utile. Merci de détecter la langue utilisé par l'Humain (apres HUMAIN :)";
+            dictionaryChats.Clear();
+            dictionaryChats[iChats.ToString()+" :"] = sIA;
+
+          
+        }
+
+
+
+            private void LoadXMLChats()
+        {
+            try
+            {
+                XmlDocument xmlDoc = new XmlDocument();
+                xmlDoc.Load(pathHistoChat);
+
+                foreach (XmlNode node in xmlDoc.SelectNodes("//item"))
+                {
+                    string key = node.SelectSingleNode("key")?.InnerText;
+                    string value = node.SelectSingleNode("value")?.InnerText;
+                    if (key != null && value != null)
+                    {
+                        dictionaryChats[key] = value;
+                    }
+
+                    string result = key.Split(':')[0];
+                    uint.TryParse(result, out iChats);
+
+
+
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                textBox1.Text = "Error load Chats file :" + pathHistoChat + " " + ex.Message + "\n";
+                InitChats();
+            }
+
+        }
+
+        private string LoadStringChats()
+        {
+
+            string schats = "";
+
+            foreach (var kvp in dictionaryChats)
+            {
+               schats = schats + "\r\n"+ kvp.Key + kvp.Value+ "\r\n";             
+            }
+
+            return schats;
+
+        }
+
+        private string LoadStringChatsHtml()
+        {
+
+            string schats = "";
+
+            foreach (var kvp in dictionaryChats)
+            {
+                schats = schats + "<br>" + kvp.Key + kvp.Value + "<br>";
+            }
+
+            return schats;
+
+        }
+
+
+        private void LoadXMLPrompts()
         {
             try
             {
@@ -223,12 +304,26 @@ private async Task GetModels()
 
             if (txtboxInput.Text != "")
             {
+
+                string sprompt = "";
+                if (!checkBoxChat.Checked)
+                {
+                    sprompt = txtboxInput.Text;
+                }
+                else
+                {
+                    iChats = iChats+1;
+                    sprompt = LoadStringChats();
+                    sprompt = sprompt + "\n"+ "HUMAIN : " + txtboxInput.Text+ "\n";
+                    dictionaryChats[iChats.ToString()+ " : HUMAIN : "] = txtboxInput.Text;
+                }
+
                 var request = new ChatCompletionRequest(
                     myModel,
                     new List<ChatMessage>()
                     {
-                        new ChatMessage(ChatMessage.RoleEnum.System,myFiltFinal),
-                        new ChatMessage(ChatMessage.RoleEnum.User, txtboxInput.Text)                      
+                        new ChatMessage(ChatMessage.RoleEnum.System,myFiltFinal),                  
+                        new ChatMessage(ChatMessage.RoleEnum.User, sprompt)                      
                     });
 
                 int Cint = 0;
@@ -264,7 +359,15 @@ private async Task GetModels()
                 }
                 webBrowser1.DocumentText = sresult.ToString();
                 textBox1.Text = "FINISH.......!!!!";
-             }
+
+                if (checkBoxChat.Checked)
+                {
+                    iChats = iChats + 1;
+                    dictionaryChats[iChats.ToString() + " : IA : "] = sresult.ToString();
+                    SaveChatsToXml();
+                }
+
+            }
             else
             {
                 textBox1.Text = "NO QUESTION ?";
@@ -292,7 +395,37 @@ private async Task GetModels()
             return input.Substring(input.Length - 5);
         }
 
-       
+        private void SaveChatsToXml()
+        {
+            try
+            {
+                XmlDocument xmlDoc = new XmlDocument();
+                XmlNode rootNode = xmlDoc.CreateElement("items");
+                xmlDoc.AppendChild(rootNode);
+
+                foreach (var kvp in dictionaryChats)
+                {
+                    XmlNode itemNode = xmlDoc.CreateElement("item");
+
+                    XmlNode keyNode = xmlDoc.CreateElement("key");
+                    keyNode.InnerText = kvp.Key;
+                    itemNode.AppendChild(keyNode);
+
+                    XmlNode valueNode = xmlDoc.CreateElement("value");
+                    valueNode.InnerText = kvp.Value;
+                    itemNode.AppendChild(valueNode);
+
+                    rootNode.AppendChild(itemNode);
+                }
+
+                xmlDoc.Save(pathHistoChat);
+            }
+            catch (Exception ex)
+            {
+                textBox1.Text = "An error occurred:" + ex.Message + "\n";
+            }
+
+        }
 
         private void SaveListBoxToXml()
         {
@@ -422,7 +555,79 @@ private async Task GetModels()
             else if (!containsblank) e.Cancel = true;
         }
 
-      
+        private void checkBoxChatbotView_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!checkBoxChatbotView.Checked)
+            {
+                checkBoxChat.Enabled = true;
+                button1.Enabled = true;
+                bdDeletePrompt.Enabled = true;
+                btNewPrompts.Enabled = true;
+                listBoxPrompt.Enabled = true;
+                txtBoxPrompts.Enabled = true;
+
+            }
+
+            if (checkBoxChatbotView.Checked)
+            {
+                checkBoxChat.Enabled = false;
+                button1.Enabled = false;
+                bdDeletePrompt.Enabled = false;
+                btNewPrompts.Enabled = false;
+                listBoxPrompt.Enabled = false;
+                txtBoxPrompts.Enabled = false;
+
+
+                webBrowser1.DocumentText = LoadStringChatsHtml();
+
+            }
+
+
+
+        }
+
+        private void checkBoxChat_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!checkBoxChat.Checked)
+            {
+                checkBoxChatbotView.Enabled = false;
+                checkBoxChatbotView.Checked = false;
+            }
+
+            if (checkBoxChat.Checked )
+            {
+                checkBoxChatbotView.Enabled = true;
+             
+            }
+        }
+
+        private void btDeleteChat_Click(object sender, EventArgs e)
+        {
+
+            // Créer une instance de la classe MessageBox
+            DialogResult result = MessageBox.Show("Delete historical Chat ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            // Vérifier le résultat de la boîte de dialogue
+            if (result == DialogResult.Yes)
+            {
+
+                InitChats();
+                SaveChatsToXml();
+            }
+            else if (result == DialogResult.No)
+            {
+                
+            }
+
+            if (checkBoxChatbotView.Checked)
+            {
+                webBrowser1.DocumentText = LoadStringChatsHtml();
+
+            }
+
+
+
+        }
     }
 
 

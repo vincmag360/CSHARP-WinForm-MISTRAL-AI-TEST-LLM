@@ -105,6 +105,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Chats.xml" />
     <Content Include="fichier.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
