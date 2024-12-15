@@ -10,6 +10,8 @@ This application utilizes the Mistral.SDK, an unofficial C# client designed for 
 
 ## Application Features
 This application facilitates interaction with the various AI models offered by Mistral AI. It also features a straightforward management system for Prompts.
+This software includes a "ChatBot" feature that allows for contextual conversations. It is also possible to reset the chat history. Closing the application does not erase this history.
+
 
 ## Response Format
 - The response format used in this application is "text," but it is possible to use JSON in the code. See the Mistral API: Enum: "text" "json_object". JSON allows you to have a formatted response and exploit it to create a rich graphical response or have interesting actions.
