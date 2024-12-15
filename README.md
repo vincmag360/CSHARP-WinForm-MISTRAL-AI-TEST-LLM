@@ -1,5 +1,6 @@
 ![C#](https://img.shields.io/badge/Just%20for%20test-Enjoy%20!-blue) [![C#](https://img.shields.io/badge/WINFORM-8A2BE2)](https://fr.wikipedia.org/wiki/Windows_Forms)  [![C#](https://img.shields.io/badge/Language-CSharp-darkgreen.svg)](https://en.wikipedia.org/wiki/C_Sharp_(programming_language))  [![License: MIT](https://img.shields.io/github/license/VINCMAG360/CSHARP-WinForm-MISTRAL-AI-TEST-LLM)](https://github.com/vincmag360/CSHARP-WinForm-MISTRAL-AI-TEST-LLM/blob/master/LICENSE.txt)
 
+[![Current Release](https://img.shields.io/github/release/vincmag360/CSHARP-WinForm-MISTRAL-AI-TEST-LLM.svg "Current Release")](https://github.com/vincmag360/CSHARP-WinForm-MISTRAL-AI-TEST-LLM/releases/latest)
 
 # This is a simple Windows application in WinForm to test the Mistral AI LLM.
 
