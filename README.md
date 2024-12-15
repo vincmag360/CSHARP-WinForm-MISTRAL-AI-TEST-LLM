@@ -9,8 +9,8 @@
 This application utilizes the Mistral.SDK, an unofficial C# client designed for interacting with the Mistral API. https://github.com/tghamm/Mistral.SDK
 
 ## Application Features
-This application facilitates interaction with the various AI models offered by Mistral AI. It also features a straightforward management system for Prompts.
-This software includes a "ChatBot" feature that allows for contextual conversations. It is also possible to reset the chat history. Closing the application does not erase this history.
+- This application facilitates interaction with the various AI models offered by Mistral AI. It also features a straightforward management system for Prompts.
+- This software includes a "ChatBot" feature that allows for contextual conversations. It is also possible to reset the chat history. Closing the application does not erase this history.
 
 
 ## Response Format
