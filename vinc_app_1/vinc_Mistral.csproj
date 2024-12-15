@@ -105,7 +105,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Chats.xml" />
+    <Content Include="Chats.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="fichier.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
